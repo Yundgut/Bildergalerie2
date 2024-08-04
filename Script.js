@@ -1,7 +1,8 @@
-function toggleMenu() {
-    const navList = document.getElementById('listvonli');
-    const isVisible = navList.style.display === 'block';
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
 
-    navList.style.display = isVisible ? 'none' : 'block';
-    document.querySelector('.dreipunkte').setAttribute('aria-expanded', !isVisible);
-}
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+    });
+});
